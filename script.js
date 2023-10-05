@@ -57,7 +57,7 @@ const inventors = [
   // Array.prototype.map()
   // 6. Map the people array such that the new array consists of strings with the names formatted as "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
   // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
-  
+
   console.log(people.map(person => {
     person = person.split(",")
     return person = `${person[1]} ${person[0]}`
@@ -73,7 +73,10 @@ const inventors = [
   // 7. Count the number of instances for each of the data items. The reduce should return an object where the keys are 'car', 'truck', etc. and the values are the count.
   // Hint: Since you want to return an object, be sure to pass an empty {} for the initial value of the "accumulator".
   
-  
+  console.log(data.reduce((acc, cur) => {
+    
+  }, {car: 0, truck: 0, bike: 0, walk: 0, van: 0,}
+  ))
   
   const devs = [
     { name: 'Wes', year: 1988 },
@@ -86,6 +89,7 @@ const inventors = [
   // 8. Check if at least one person is 19 or older?
   // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
   
+  console.log(devs.some(dev => new Date().getFullYear() - dev.year >= 19))
   
   // Array.prototype.every()
   // 9. Check if everyone is 19 or older?
